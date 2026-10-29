@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShambaPulse - Prices</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<h1>ShambaPulse</h1>
+<p>Weather alerts, market prices and farm advisories for smallholder farmers and pastoralists in Nyanza, Kenya.</p>
+</header>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="alerts.html">Alerts</a></li>
+<li><a href="prices.html">Prices</a></li>
+<li><a href="ussd.html">USSD and SMS</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<main class="layout">
+<section class="hero">
+<h2>Market prices</h2>
+<p>Price information is kept distinct from demand signals. Every price on this page shows the commodity, the unit, the market and the date, so a farmer can tell what the number actually means.</p>
+</section>
+<section class="content">
+<h2>Sample price table</h2>
+<p>These are sample rows showing the layout. Real prices in the full ShambaPulse system come from the market price feed, with the source recorded beside each record.</p>
+<table>
+<tr><th>Commodity</th><th>Unit</th><th>Market</th><th>Price</th></tr>
+<tr><td>Maize</td><td>90 kg bag</td><td>Nyando</td><td>Sample only</td></tr>
+<tr><td>Beans</td><td>90 kg bag</td><td>Nyando</td><td>Sample only</td></tr>
+<tr><td>Milk</td><td>1 litre</td><td>Nyando</td><td>Sample only</td></tr>
+</table>
+<p>Prices are shown with their unit, source and date in the full system. A price without a unit is not useful, so the unit is never left out.</p>
+</section>
+<aside class="aside">
+<h2>Why the unit matters</h2>
+<p>A price for "maize" means nothing until you know whether it is per kilogram, per 90 kg bag, or per debe. ShambaPulse records the unit with every price, and duplicate feed imports are blocked by a stable key so the same price is not counted twice.</p>
+</aside>
+<section class="cards">
+<ul class="card-row">
+<li>
+<h3>By market</h3>
+<p>Farmers compare prices across nearby markets before deciding where to sell.</p>
+</li>
+<li>
+<h3>By commodity</h3>
+<p>Each commodity has its own unit, so prices are compared like with like.</p>
+</li>
+<li>
+<h3>By date</h3>
+<p>The date beside every price shows how fresh the information is.</p>
+</li>
+</ul>
+</section>
+</main>
+<footer>
+<p>ShambaPulse - Diploma of Business Information Technology, Strathmore University</p>
+<p>By Gideon Francis (227167) and Japhet Kinanga (227610)</p>
+</footer>
+</body>
+</html>
