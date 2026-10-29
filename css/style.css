@@ -767,4 +767,319 @@ body.contact .faq details p{
     .route-cards li:hover{
         transform: none;
     }
+}/* ==========================================================
+   Inner pages: Alerts, Prices, USSD (body class="inner")
+   ========================================================== */
+body.inner{
+    --page-pad: max(1.5rem, calc((100% - 70rem) / 2 + 1.25rem));
+}
+
+body.inner header{
+    padding: 3rem var(--page-pad) 2.5rem;
+}
+body.inner header h1{
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+    line-height: 1.1;
+}
+body.inner header p{
+    max-width: 44rem;
+    font-size: 1.1rem;
+}
+body.inner nav ul{
+    padding: 0.5rem var(--page-pad);
+    gap: 0.25rem 2rem;
+}
+body.inner nav a{
+    display: inline-block;
+    padding: 0.6rem 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+body.inner main{
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 1.25rem 4rem;
+}
+body.inner aside{
+    grid-area: auto;
+}
+body.inner footer{
+    padding: 2rem var(--page-pad);
+    font-size: 0.95rem;
+}
+body.inner footer p{
+    margin: 0 0 0.25rem;
+}
+body.inner footer p:first-child{
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+}
+
+/* headings with the gold-and-green rule */
+body.inner main h2{
+    position: relative;
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.6rem;
+    color: var(--leaf);
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+body.inner main h2::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 4.5rem;
+    height: 4px;
+    background: linear-gradient(90deg, var(--grain) 0 60%, var(--sprout) 60% 100%);
+    border-radius: 2px;
+}
+body.inner main > section{
+    margin-top: 3.5rem;
+}
+body.inner .lead{
+    margin: 0 0 1.25rem;
+    color: var(--ink-soft);
+}
+
+/* page intro */
+body.inner .page-intro{
+    max-width: 46rem;
+    margin-top: 0;
+    padding: 3.5rem 0 0.5rem;
+}
+body.inner .page-intro::before{
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 4px;
+    margin-bottom: 1.5rem;
+    background: var(--grain);
+}
+body.inner .page-intro h2{
+    font-size: clamp(2rem, 4.5vw, 2.75rem);
+}
+body.inner .page-intro p{
+    margin: 0;
+    font-family: var(--font-head);
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    line-height: 1.7;
+}
+
+/* main text beside a side note */
+body.inner .split{
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+}
+body.inner .content p,
+body.inner .content li{
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+body.inner .content ol,
+body.inner .content ul{
+    padding-left: 1.4rem;
+}
+body.inner .content li{
+    margin-bottom: 0.35rem;
+}
+body.inner .side{
+    padding: 1.4rem;
+    background: var(--card);
+    border-top: 4px solid var(--sprout);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 1px 4px rgba(46, 107, 47, 0.18);
+}
+body.inner .side h3{
+    margin: 0 0 0.6rem;
+    color: var(--soil);
+}
+body.inner .side ul{
+    margin: 0;
+    padding-left: 1.2rem;
+}
+body.inner .side p{
+    margin: 0;
+    color: var(--ink-soft);
+}
+
+/* tables on inner pages */
+body.inner table{
+    margin: 1.25rem 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(46, 107, 47, 0.18);
+}
+
+/* SMS bubbles (Alerts) */
+body.inner .sms-row{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+body.inner .sms{
+    padding: 1.1rem 1.25rem;
+    background: #e8f2d4;
+    border-left: 6px solid var(--leaf);
+    border-radius: 14px 14px 14px 2px;
+    box-shadow: 0 1px 4px rgba(46, 107, 47, 0.18);
+}
+body.inner .sms-label{
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--leaf-dark);
+}
+body.inner .sms p{
+    margin: 0;
+}
+
+/* phone screens (USSD) */
+body.inner .phone-row{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+body.inner .phone{
+    padding: 1.1rem 1.25rem 1.25rem;
+    color: #e9f3d3;
+    background: var(--soil-dark);
+    border: 4px solid var(--soil);
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+body.inner .phone-label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--grain);
+}
+body.inner .phone pre{
+    margin: 0;
+    padding: 0.9rem 1rem;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    color: #1d2a1b;
+    background: #cfe3a6;
+    border-radius: 6px;
+}
+
+/* numbered steps */
+body.inner .steps ol{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+}
+body.inner .steps li{
+    padding: 1.5rem 1.25rem 1.25rem;
+    background: var(--card);
+    border-left: 6px solid var(--sprout);
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(46, 107, 47, 0.18);
+    counter-increment: step;
+}
+body.inner .steps li::before{
+    content: counter(step);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-bottom: 0.6rem;
+    font-family: var(--font-head);
+    font-weight: 600;
+    color: var(--soil-dark);
+    background: var(--grain);
+    border-radius: 50%;
+}
+body.inner .steps h3{
+    margin: 0 0 0.4rem;
+    color: var(--leaf);
+}
+body.inner .steps p{
+    margin: 0;
+    color: var(--ink-soft);
+}
+
+/* FAQ */
+body.inner .faq details{
+    margin-bottom: 0.6rem;
+    background: var(--card);
+    border-left: 4px solid var(--grain);
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(46, 107, 47, 0.15);
+}
+body.inner .faq summary{
+    padding: 0.9rem 1rem;
+    font-weight: 600;
+    color: var(--leaf-dark);
+    cursor: pointer;
+}
+body.inner .faq details p{
+    margin: 0;
+    padding: 0 1rem 1rem;
+    color: var(--ink-soft);
+}
+
+/* call to action */
+body.inner .cta{
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: #f6f8ec;
+    border-radius: 10px;
+    border-bottom: 5px solid var(--grain);
+    background-color: var(--soil);
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.04) 0,
+        rgba(255, 255, 255, 0.04) 18px,
+        rgba(0, 0, 0, 0.08) 18px,
+        rgba(0, 0, 0, 0.08) 36px
+    );
+}
+body.inner .cta h2{
+    color: var(--grain);
+}
+body.inner .cta h2::after{
+    left: 50%;
+    transform: translateX(-50%);
+}
+body.inner .cta p{
+    margin: 0 0 1rem;
+}
+
+@media (max-width: 800px){
+    body.inner .split,
+    body.inner .sms-row,
+    body.inner .phone-row{
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    body.inner header{
+        padding: 2.25rem var(--page-pad) 2rem;
+    }
+    body.inner .page-intro{
+        padding-top: 2.5rem;
+    }
+    body.inner table{
+        display: block;
+        overflow-x: auto;
+    }
 }
